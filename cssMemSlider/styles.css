@@ -12,7 +12,7 @@
     --color-primary: #E2CEFF;
     --color-black:#000000;
     --color-white:#ffffff;
-    --color-yellow:#ffbe2e;
+    --color-yellow:#feb201;
 }
 body {
     scroll-behavior: smooth;
@@ -46,4 +46,39 @@ main .slides-description {
 .slide, 
 .slide-desc {
     display: inline-block;
+}
+.slide-image {
+    width: 100%;
+}
+/* .under {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+} */
+.slide-desc {
+    padding: 0.5rem 0;
+    width: 100%;
+    vertical-align: top;
+}
+.slider-controls {
+    cursor: default;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    gap: 0.1rem;
+    background-color: var(--color-yellow)
+}
+.control-icon {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.dot {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    border: solid 0.15rem var(--color-primary);
+    background-color: var(--color-primary);
+    transition: 0.3s;
+    cursor: pointer;
 }
