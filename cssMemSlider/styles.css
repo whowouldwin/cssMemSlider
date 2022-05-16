@@ -35,3 +35,15 @@ main {
     margin: 2rem;
     max-width: 75rem;
 }
+.slide-item {
+    display: none;
+}
+main .slides,
+main .slides-description {
+    transition: 0.3s;
+    width: 100%;
+}
+.slide, 
+.slide-desc {
+    display: inline-block;
+}
