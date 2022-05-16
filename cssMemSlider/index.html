@@ -9,40 +9,42 @@
     <title>cssMemSlider</title>
 </head>
 <body>
-    <div class="container">
-        <div class="slider-wrapper">
-            <div class="slides">
-                <div class="slide">
-                    <img class="slide-image" src="./assets/delelopment_process.jpg" alt="Delelopment process">
-                    <img class="slide-image" src="./assets/development_cycle.jpg"  alt="Development cycle">
-                    <img class="slide-image" src="./assets/it_always_worked.jpg" alt="It always worked">
-                    <img class="slide-image" src="./assets/on_my_machine_it_works.jpg" alt="On my machine it works">
+    <main>
+        <div class="container">
+            <div class="slider-wrapper">
+                <div class="first-slide" id="slide1"></div>
+                <div class="second-slide" id="slide2"></div>
+                <div class="third-slide" id="slide3"></div>
+                <div class="fourth-slide" id="slide4"></div>
+                <div class="slides">
+                    <div class="slide">
+                        <img class="slide-image" src="./assets/delelopment_process.jpg" alt="Delelopment process">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="./assets/development_cycle.jpg" alt="Development cycle">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="./assets/it_always_worked.jpg" alt="It always worked">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="./assets/on_my_machine_it_works.jpg" alt="On my machine it works">
+                    </div>
                 </div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-            </div>
-            <div class="slides-description">
-                <p class="slide-desc">Delelopment process</p>
-                <p class="slide-desc">Development cycle</p>
-                <p class="slide-desc">It always worked</p>
-                <p class="slide-desc">On my machine it works</p>
-            </div>
-            <div class="slider-controls">
-                <label for="first-slide" class="control-wrapper">
-                    <span class="control-icon"></span>
-                </label>
-                <label for="second-slide" class="control-wrapper">
-                    <span class="control-icon"></span>
-                </label>
-                <label for="third-slide" class="control-wrapper">
-                    <span class="control-icon"></span>
-                </label>
-                <label for="fourth-slide" class="control-wrapper">
-                    <span class="control-icon"></span>
-                </label>
+                <div class="slides-description">
+                    <p class="slide-desc">Delelopment process</p>
+                    <p class="slide-desc">Development cycle</p>
+                    <p class="slide-desc">It always worked</p>
+                    <p class="slide-desc">On my machine it works</p>
+                </div>
+                <div class="slider-controls">
+                    <a class="control-icon" href="#slide1"><button class="dot"></button></a>
+                    <a class="control-icon" href="#slide2"><button class="dot"></button></a>
+                    <a class="control-icon" href="#slide3"><button class="dot"></button></a>
+                    <a class="control-icon" href="#slide4"><button class="dot"></button></a>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
+
 </html>
