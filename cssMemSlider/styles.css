@@ -1,0 +1,142 @@
+@font-face {
+    src: url("./assets/fonts/beer_money.ttf");
+    font-weight: 400;
+    font-family: 'beer_money';
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-primary: #E2CEFF;
+    --color-black:#000000;
+    --color-white:#ffffff;
+    --color-yellow:#feb201;
+    --color-red:#ff0000;
+}
+body {
+    scroll-behavior: smooth;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("./assets/cute_monster.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: 'beer_money';
+    overflow: hidden;
+}
+main {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    position: relative;
+    gap: 2rem;
+    overflow: hidden;
+    margin: 2rem;
+    max-width: 60rem;
+
+}
+.wrapper {
+    background: rgba(253, 253, 253, 0.5);
+    padding-bottom: 3rem;
+}
+.slide-item {
+    display: none;
+}
+main .slides,
+main .slides-description {
+    white-space: nowrap;
+    transition: 0.3s;
+    width: 100%;
+}
+.slide, 
+.slide-desc {
+    display: inline-block;
+    font-size: larger;
+}
+.slide-image {
+    width: 100%;
+    
+}
+.under {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.slide-desc {
+    padding: 0.5rem 0;
+    width: 100%;
+    vertical-align: top;
+    padding-left: 2rem;
+}
+.slider-controls {
+    cursor: default;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    gap: 0.1rem;
+}
+.control-icon {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.dot {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    border: solid 0.15rem var(--color-primary);
+    background-color: var(--color-primary);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.slide-item :target ~ .dot {
+    background-color: var(--color-primary);
+}
+.main .slider-controls > .control-icon:first-child > .dot,
+#slide1:target ~ .under .slider-controls > *:nth-child(1) > .dot,
+#slide2:target ~ .under .slider-controls > *:nth-child(2) > .dot,
+#slide3:target ~ .under .slider-controls > *:nth-child(3) > .dot,
+#slide4:target ~ .under .slider-controls > *:nth-child(4) > .dot {
+    background-color: var(--color-yellow);
+}
+.control-icon:hover > .dot,
+.main .slider-controls > .control-icon:first-child:hover > .dot,
+.main > .slide-item:target ~ .under .slider-controls > .control-icon:hover > .dot,
+#slide1:target ~ .under .slider-controls > *:nth-child(1):hover > .dot,
+#slide2:target ~ .under .slider-controls > *:nth-child(2):hover > .dot,
+#slide3:target ~ .under .slider-controls > *:nth-child(3):hover > .dot,
+#slide4:target ~ .under .slider-controls > *:nth-child(4):hover > .dot {
+    border-color: var(--color-white);
+    background-color: var(--color-white);
+}
+.control-icon:active > .dot,
+.main .dots > .control-icon:first-child:active > .dot,
+.main > .slide-item:target ~ .under .slider-controls > .control-icon:active > .dot,
+#slide1:target ~ .under .slider-controls > *:nth-child(1):active > .dot,
+#slide2:target ~ .under .slider-controls > *:nth-child(2):active > .dot,
+#slide3:target ~ .under .slider-controls > *:nth-child(3):active > .dot,
+#slide4:target ~ .under .slider-controls> *:nth-child(4):active > .dot {
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+}
+#slide1:target ~ .slides .slide-item,
+#slide1:target ~ .under .slides-description {
+    transform: translateX(0%);
+}
+#slide2:target ~ .slides ,
+#slide2:target ~ .under .slides-description  {
+    transform: translateX(-101%);
+}
+
+#slide3:target ~ .slides ,
+#slide3:target ~ .under .slides-description  {
+    transform: translateX(-201%);
+}
+
+#slide4:target ~ .slides ,
+#slide4:target ~ .under .slides-description  {
+    transform: translateX(-300%);
+}
