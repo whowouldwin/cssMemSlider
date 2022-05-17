@@ -1,6 +1,6 @@
 @font-face {
     src: url("./assets/fonts/beer_money.ttf");
-    font-weight: 1000;
+    font-weight: 400;
     font-family: 'beer_money';
 }
 * {
@@ -25,6 +25,7 @@ body {
     background-size:cover;
     background-repeat: no-repeat;
     font-family: 'beer_money';
+    overflow: hidden;
 }
 main {
     display: flex;
@@ -34,33 +35,42 @@ main {
     gap: 2rem;
     overflow: hidden;
     margin: 2rem;
-    max-width: 75rem;
+    max-width: 60rem;
+
+}
+.wrapper {
+    background: rgba(253, 253, 253, 0.5);
+    padding-bottom: 3rem;
 }
 .slide-item {
     display: none;
 }
 main .slides,
 main .slides-description {
+    white-space: nowrap;
     transition: 0.3s;
     width: 100%;
 }
 .slide, 
 .slide-desc {
     display: inline-block;
+    font-size: larger;
 }
 .slide-image {
     width: 100%;
+    
 }
-/* .under {
+.under {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-} */
+}
 .slide-desc {
     padding: 0.5rem 0;
     width: 100%;
     vertical-align: top;
+    padding-left: 2rem;
 }
 .slider-controls {
     cursor: default;
@@ -68,7 +78,6 @@ main .slides-description {
     position: relative;
     display: flex;
     gap: 0.1rem;
-    background-color: var(--color-yellow)
 }
 .control-icon {
     padding: 0.5rem;
@@ -112,4 +121,22 @@ main .slides-description {
 #slide4:target ~ .under .slider-controls> *:nth-child(4):active > .dot {
     border-color: var(--color-red);
     background-color: var(--color-red);
+}
+#slide1:target ~ .slides .slide-item,
+#slide1:target ~ .under .slides-description {
+    transform: translateX(0%);
+}
+#slide2:target ~ .slides ,
+#slide2:target ~ .under .slides-description  {
+    transform: translateX(-101%);
+}
+
+#slide3:target ~ .slides ,
+#slide3:target ~ .under .slides-description  {
+    transform: translateX(-201%);
+}
+
+#slide4:target ~ .slides ,
+#slide4:target ~ .under .slides-description  {
+    transform: translateX(-300%);
 }
